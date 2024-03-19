@@ -1,0 +1,29 @@
+# Task Manager Application
+
+The Task Manager is a web application designed to help users manage their daily tasks efficiently. It features user authentication, task addition, editing, and deletion functionalities, along with the ability to sign up/login via email/password or Google. This application utilizes React for the frontend, Firebase for authentication and database services, and Tailwind CSS for styling.
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+- Node.js and npm are installed on your machine. Node.js 14.x or higher and npm 6.x or higher are recommended.
+- A Firebase project is created at [Firebase Console](https://console.firebase.google.com/), and the necessary configurations for Authentication and Firestore Database are set up.
+
+## Setting Up Your Project
+
+To get a local copy up and running, follow these simple steps:
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/talha-husnain/Task_Manager.git
+cd Task_Manager
+Install dependencies
+npm install
+start frontend
+npm run dev
+it will start frontend
+start backend
+cd backend
+node server.js
+it will start server at localhost 3001
+
