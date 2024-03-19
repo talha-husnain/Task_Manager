@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import TaskForm from '../components/TaskForm';
 import TaskList from '../components/TaskList';
 import { Task } from '../interfaces/index';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const Todo: React.FC = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -106,8 +109,28 @@ const Todo: React.FC = () => {
           onToggle={toggleTaskCompletion}
         />
       </main>
-      <footer className="bg-gradient-to-r from-blue-800 to-purple-700 text-center p-4 fixed bottom-0 w-full">
-        <p>Footer Content</p>
+      <footer className="bg-gradient-to-r from-blue-800 to-purple-700 text-center p-4 fixed bottom-0 w-full text-white">
+        <div className="flex justify-center items-center space-x-6">
+          <a href="https://github.com/talha-husnain" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
+            <FontAwesomeIcon icon={faGithub} />
+            <span>GitHub</span>
+          </a>
+          <a href="mailto:talhahusnain1061@gmail.com" className="flex items-center space-x-2">
+            <FontAwesomeIcon icon={faEnvelope} />
+            <span>talhahusnain1061@gmail.com</span>
+          </a>
+          <a href="tel:+93114739822" className="flex items-center space-x-2">
+            <FontAwesomeIcon icon={faPhone} />
+            <span>+93114739822</span>
+          </a>
+          <a href="https://www.linkedin.com/in/talha-husnain-a93139206/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
+            <FontAwesomeIcon icon={faLinkedin} />
+            <span>LinkedIn</span>
+          </a>
+          <p> Made with ❤️  </p>
+
+          <p>&copy; 2024 Talha Husnain</p>
+        </div>
       </footer>
     </div>
   );
