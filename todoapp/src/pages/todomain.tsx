@@ -75,14 +75,9 @@ const Todo: React.FC = () => {
       .filter((task) => filter === 'all' || (filter === 'active' && !task.completed) || (filter === 'completed' && task.completed))
       .sort((a, b) => {
         if (sortBy === 'created') {
-          // If 'created' is a Date object:
-          // return b.created.getTime() - a.created.getTime();
-
-          // If 'created' is an ISO string:
           return new Date(b.created).getTime() - new Date(a.created).getTime();
         }
         const priorityMap = { high: 3, medium: 2, low: 1 };
-        // Use 'as keyof typeof priorityMap' to ensure keys are recognized as valid
         return (priorityMap[b.priority as keyof typeof priorityMap] || 0) -
           (priorityMap[a.priority as keyof typeof priorityMap] || 0);
       });
